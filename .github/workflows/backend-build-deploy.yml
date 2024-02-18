@@ -1,4 +1,4 @@
-name: Build & Push to ECR
+name: Backend Build & Push to ECR
 on:
   workflow_dispatch:
 jobs:
