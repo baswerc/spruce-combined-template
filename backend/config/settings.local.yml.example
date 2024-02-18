@@ -1,0 +1,2 @@
+database_url: postgis://postgres:password@localhost:54320/spruce_snowbird
+test_database_url: postgis://postgres:password@localhost:5432/spruce_snowbird_test

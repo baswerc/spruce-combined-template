@@ -1,0 +1,28 @@
+hostname: api.spruce.teamsnowbird.net
+
+redis:
+  host: localhost
+  port: 6379
+  app_data:
+    url: redis://localhost:6379
+  sidekiq:
+    url: redis://localhost:6379
+  rails_cache:
+    url: redis://localhost:6379
+
+betamocks:
+  enabled: true
+  recording: false
+  cache_dir: mock_data
+  services_config: config/betamocks/services_config.yml
+
+# For CORS requests; separate multiple origins with a comma
+web_origin: http://localhost,http://localhost:3000,http://localhost:3001,http://127.0.0.1:3000,http://127.0.0.1:3001,null,https://spruce.teamsnowbird.net,http://spruce.teamsnowbird.net
+web_origin_regex: \Ahttps?:\/\/www\.va\.gov\z
+
+hqva_mobile:
+  url: "https://veteran.apps.va.gov"
+  mock: true
+
+va_mobile:
+  url: "https://veteran.apps.va.gov"

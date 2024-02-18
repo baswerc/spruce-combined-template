@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgis
+  encoding: unicode
+  pool: <%= ENV.fetch('RAILS_MAX_THREADS') { 5 } %>
+
+development:
+  <<: *default
+  url: <%= Settings.database_url %>
+
+test:
+  <<: *default
+  url: <%= Settings.test_database_url %>
+
+production:
+  <<: *default
+  url: <%= Settings.database_url %>

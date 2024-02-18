@@ -1,0 +1,42 @@
+version: '3.4'
+services:
+  redis:
+    image: redis:5.0-alpine
+    ports:
+      - "63790:6379"
+  postgres:
+    image: mdillon/postgis:11-alpine
+    environment:
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:-password}"
+      POSTGRES_USER: "${POSTGRES_USER:-postgres}"
+    volumes:
+      - ./data:/var/lib/postgresql/data:cached
+    ports:
+      - "54320:5432"
+  spruce-challenge-api:
+    build:
+      context: .
+      target: development
+    image: "spruce-challenge-api:${DOCKER_IMAGE:-latest}"
+    volumes:
+      - .:/srv/spruce-challenge-api/src:cached
+      - dev_bundle:/usr/local/bundle
+    ports:
+      - "3000:3000"
+    environment:
+      "Settings.database_url": "postgis://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-password}@${POSTGRES_HOST:-postgres}:${POSTGRES_PORT:-5432}/${POSTGRES_DATABASE:-spruce_challenge}"
+      "Settings.test_database_url": "postgis://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-password}@${POSTGRES_HOST:-postgres}:${POSTGRES_PORT:-5432}/${POSTGRES_DATABASE:-spruce_challenge_test}"
+      "Settings.redis.app_data.url": "redis://redis:6379"
+      "Settings.redis.sidekiq.url": "redis://redis:6379"
+      POSTGRES_HOST: "${POSTGRES_HOST:-postgres}"
+      POSTGRES_PORT: "${POSTGRES_PORT:-5432}"
+      POSTGRES_USER: "${POSTGRES_USER:-postgres}"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:-password}"
+    depends_on:
+      - postgres
+      - redis
+    links:
+      - postgres
+      - redis
+volumes:
+  dev_bundle:

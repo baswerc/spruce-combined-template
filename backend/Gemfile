@@ -1,0 +1,49 @@
+source "https://rubygems.org"
+
+ruby "3.2.2"
+
+gem "rails", "~> 7.0.8"
+
+gem 'activerecord-postgis-adapter'
+gem "bootsnap", require: false
+gem 'config'
+gem 'dry-struct'
+gem 'dry-types'
+gem 'faraday', '~> 1.10'
+gem 'faraday_middleware'
+gem 'flipper'
+gem 'flipper-active_record'
+gem 'foreman'
+gem 'pg'
+gem 'pg_query'
+gem 'pg_search'
+gem "puma", "~> 5.0"
+gem 'rack'
+gem 'rack-attack'
+gem 'rack-cors', require: 'rack/cors'
+gem 'rack-timeout', require: 'rack/timeout/base'
+gem 'redis'
+gem 'sidekiq', '6.5.12'
+gem 'swagger-blocks'
+
+group :development, :test do
+  gem 'database_cleaner-active_record'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'rspec-rails'
+  gem 'rubocop', require: false
+  gem 'rubocop-rails'
+  gem 'rubocop-rspec'
+  gem 'rubocop-thread_safety'
+end
+
+group :development do
+  # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
+  # gem "spring"
+end
+
+group :test do
+  gem 'fakeredis'
+  gem 'simplecov', require: false
+  gem 'vcr'
+end
