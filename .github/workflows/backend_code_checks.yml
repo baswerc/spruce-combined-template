@@ -6,7 +6,7 @@ permissions:
   checks: write
 defaults:
   run:
-    working-directory: ./backend
+    working-directory: ./backendx
 jobs:
 
   linting_and_security:
