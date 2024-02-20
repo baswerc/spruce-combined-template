@@ -4,6 +4,9 @@ on:
 permissions:
   contents: read
   checks: write
+defaults:
+  run:
+    working-directory: ./backend
 jobs:
 
   linting_and_security:
@@ -12,9 +15,6 @@ jobs:
       CI: true
       TERM: xterm-256color
     runs-on: ubuntu-20.04
-    defaults:
-      run:
-        working-directory: ./backend
     steps:
       - uses: actions/checkout@v3
 
