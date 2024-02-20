@@ -71,12 +71,12 @@ jobs:
 
       - name: Setup Database
         run: |
-          docker-compose -f docker-compose.test.yml run spruce-challenge-api bash \
+          docker-compose -f docker-compose-test.yml run spruce-challenge-api bash \
           -c "CI=true RAILS_ENV=test bin/rails db:reset"
 
       - name: Run Specs
         run: |
-          docker-compose -f docker-compose.test.yml run telehealth-api bash \
+          docker-compose -f docker-compose-test.yml run telehealth-api bash \
           -c "CI=true DISABLE_BOOTSNAP=true bundle exec rspec spec/"
 
       - name: Upload Coverage Report
