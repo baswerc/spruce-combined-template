@@ -12,24 +12,23 @@ jobs:
       CI: true
       TERM: xterm-256color
     runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: ./backend
     steps:
       - uses: actions/checkout@v3
 
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.2.2
           bundler-cache: true
 
       - name: Run bundle-audit (SCA)
-        working-directory: ./backend
         run:  bundle exec bundle-audit check --update
 
       - name: Run Rubocop (Style Checker)
-        working-directory: ./backend
         run:  bundle exec rubocop
 
       - name: Run Brakeman (Static Analysis)
-        working-directory: ./backend
         run:  bundle exec brakeman --ensure-latest --confidence-level=2 --format text --color
   tests:
     name: Test
