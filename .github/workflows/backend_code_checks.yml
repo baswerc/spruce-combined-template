@@ -6,9 +6,8 @@ permissions:
   checks: write
 defaults:
   run:
-    working-directory: ./backendx
+    working-directory: ./backend
 jobs:
-
   linting_and_security:
     name: Linting and Security
     env:
@@ -20,7 +19,11 @@ jobs:
 
       - uses: ruby/setup-ruby@v1
         with:
+          ruby-version: 3.2.2
           bundler-cache: true
+
+      - name: Run bundle install
+        run:  bundle install
 
       - name: Run bundle-audit (SCA)
         run:  bundle exec bundle-audit check --update
