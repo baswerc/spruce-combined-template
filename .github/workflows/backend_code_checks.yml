@@ -32,7 +32,7 @@ jobs:
         run:  bundle exec rubocop
 
       - name: Run Brakeman (Static Analysis)
-        run:  bundle exec brakeman --ensure-latest --confidence-level=2 --format text --color
+        run:  bundle exec brakeman --confidence-level=2 --format text --color
   tests:
     name: Test
     env:
