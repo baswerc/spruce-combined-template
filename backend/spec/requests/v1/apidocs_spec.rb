@@ -4,6 +4,9 @@ require 'rails_helper'
 
 RSpec.describe 'V1::Apidocs' do
   describe 'GET /index' do
-    pending "add some examples (or delete) #{__FILE__}"
+      it 'returns success' do
+        get '/v1/apidocs'
+        expect(response).to have_http_status(:success)
+      end
   end
 end
