@@ -1,11 +1,13 @@
-source "https://rubygems.org"
+# frozen_string_literal: true
 
-ruby "3.2.2"
+source 'https://rubygems.org'
 
-gem "rails", "~> 7.0.8"
+ruby '3.2.2'
+
+gem 'rails', '~> 7.0.8'
 
 gem 'activerecord-postgis-adapter'
-gem "bootsnap", require: false
+gem 'bootsnap', require: false
 gem 'config'
 gem 'dry-struct'
 gem 'dry-types'
@@ -17,7 +19,7 @@ gem 'foreman'
 gem 'pg'
 gem 'pg_query'
 gem 'pg_search'
-gem "puma", "~> 5.0"
+gem 'puma', '~> 5.0'
 gem 'rack'
 gem 'rack-attack'
 gem 'rack-cors', require: 'rack/cors'
@@ -27,6 +29,8 @@ gem 'sidekiq', '6.5.12'
 gem 'swagger-blocks'
 
 group :development, :test do
+  gem 'brakeman'
+  gem 'bundler-audit'
   gem 'database_cleaner-active_record'
   gem 'factory_bot_rails'
   gem 'faker'

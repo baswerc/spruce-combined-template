@@ -73,7 +73,12 @@ GEM
     bigdecimal (3.1.6)
     bootsnap (1.18.3)
       msgpack (~> 1.2)
+    brakeman (6.1.1)
+      racc
     builder (3.2.4)
+    bundler-audit (0.9.1)
+      bundler (>= 1.2.0, < 3)
+      thor (~> 1.0)
     concurrent-ruby (1.2.3)
     config (5.1.0)
       deep_merge (~> 1.2, >= 1.2.1)
@@ -333,6 +338,8 @@ PLATFORMS
 DEPENDENCIES
   activerecord-postgis-adapter
   bootsnap
+  brakeman
+  bundler-audit
   config
   database_cleaner-active_record
   dry-struct
