@@ -12,18 +12,20 @@
 !/backend/tmp/.keep
 
 # Ignore pidfiles, but keep the directory.
-/tmp/pids/*
-!/tmp/pids/
-!/tmp/pids/.keep
+/backend/tmp/pids/*
+!/backend/tmp/pids/
+!/backend/tmp/pids/.keep
 
 # Ignore uploaded files in development.
 /backend/storage/*
+/backend/data
 !/backend/storage/.keep
 /backend/tmp/storage/*
 !/backend/tmp/storage/
 !/backend/tmp/storage/.keep
 
+
 # Ignore master key for decrypting credentials and more.
 /backend/config/master.key
-/backend/config/c
+/backend/config/settings/
 /backend/config/settings.local.yml
