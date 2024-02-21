@@ -1,10 +1,18 @@
 # frozen_string_literal: true
 
-require 'simplecov'
 require 'vcr'
 require 'factory_bot_rails'
 
-SimpleCov.start
+unless ENV['NOCOVERAGE']
+  require 'simplecov'
+
+  SimpleCov.start 'rails' do
+      if ENV['CI']
+        SimpleCov.minimum_coverage 90
+        SimpleCov.refuse_coverage_drop
+      end
+  end
+end
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
