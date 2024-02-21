@@ -6,7 +6,7 @@ permissions:
   checks: write
 defaults:
   run:
-    working-directory: ./backend
+    working-directory: backend
 jobs:
   linting_and_security:
     name: Linting and Security
@@ -102,13 +102,13 @@ jobs:
       - uses: actions/download-artifact@v3
 
       - name: Fix up coverage report to work with coverage-check-action
-        run: sed -i 's/"line"/"covered_percent"/g' 'Coverage Report/.last_run.json'
+        run: sed -i 's/"line"/"covered_percent"/g' 'coverage/.last_run.json'
 
       - name: Publish Coverage Report
         uses: devmasx/coverage-check-action@v1.2.0
         if: hashFiles('Coverage Report/.last_run.json') != ''
         with:
           type: simplecov
-          result_path: backend/Coverage Report/.last_run.json
+          result_path: backend/coverage/.last_run.json
           min_coverage: 90
           token: ${{ secrets.GITHUB_TOKEN }}
