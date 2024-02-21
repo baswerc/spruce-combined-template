@@ -7,7 +7,6 @@ ruby '3.2.2'
 gem 'rails', '~> 7.0.8'
 
 gem 'activerecord-postgis-adapter'
-gem 'bootsnap', require: false
 gem 'config'
 gem 'dry-struct'
 gem 'dry-types'

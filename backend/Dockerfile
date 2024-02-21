@@ -1,4 +1,4 @@
-ARG RELEASE=bullseye
+ARG RELEASE=bookworm
 FROM ruby:3.2.2-slim-${RELEASE} as rubyimg
 
 ###

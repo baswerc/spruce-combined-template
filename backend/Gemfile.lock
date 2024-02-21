@@ -71,8 +71,6 @@ GEM
       tzinfo (~> 2.0)
     ast (2.4.2)
     bigdecimal (3.1.6)
-    bootsnap (1.18.3)
-      msgpack (~> 1.2)
     brakeman (6.1.1)
       racc
     builder (3.2.4)
@@ -173,6 +171,7 @@ GEM
     foreman (0.87.2)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    google-protobuf (3.25.2-aarch64-linux)
     google-protobuf (3.25.2-arm64-darwin)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
@@ -191,7 +190,6 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.5)
     minitest (5.22.2)
-    msgpack (1.7.2)
     multipart-post (2.3.0)
     net-imap (0.4.10)
       date
@@ -203,6 +201,8 @@ GEM
     net-smtp (0.4.0.1)
       net-protocol
     nio4r (2.7.0)
+    nokogiri (1.16.2-aarch64-linux)
+      racc (~> 1.4)
     nokogiri (1.16.2-arm64-darwin)
       racc (~> 1.4)
     parallel (1.24.0)
@@ -336,11 +336,11 @@ GEM
     zeitwerk (2.6.13)
 
 PLATFORMS
+  aarch64-linux
   arm64-darwin-22
 
 DEPENDENCIES
   activerecord-postgis-adapter
-  bootsnap
   brakeman
   bundler-audit
   config
