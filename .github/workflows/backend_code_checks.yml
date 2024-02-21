@@ -71,7 +71,7 @@ jobs:
 
       - name: Setup Database
         run: |
-          docker-compose -f docker-compose-test.yml run spruce-challenge-api RAILS_ENV=test bin/rails db:reset
+          RAILS_ENV=test docker-compose -f docker-compose-test.yml run spruce-challenge-api bin/rails db:reset
 
       - name: Run Specs
         run: |
