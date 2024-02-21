@@ -9,8 +9,6 @@ services:
     build:
       context: .
       target: development
-      args:
-        userid: "${SPRUCE_API_USER_ID}"
     image: "spruce-challenge-api:${DOCKER_IMAGE:-latest}"
     volumes:
       - .:/srv/spruce-challenge-api/src

@@ -76,7 +76,7 @@ jobs:
 
       - name: Run Specs
         run: |
-          docker-compose -f docker-compose-test.yml run telehealth-api bash \
+          docker-compose -f docker-compose-test.yml run spruce-challenge-api bash \
           -c "CI=true DISABLE_BOOTSNAP=true bundle exec rspec spec/"
 
       - name: Upload Coverage Report
