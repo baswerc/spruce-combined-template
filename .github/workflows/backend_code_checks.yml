@@ -4,9 +4,6 @@ on:
 permissions:
   contents: read
   checks: write
-defaults:
-  run:
-    working-directory: backend
 jobs:
   linting_and_security:
     name: Linting and Security
@@ -14,6 +11,9 @@ jobs:
       CI: true
       TERM: xterm-256color
     runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: ./backend
     steps:
       - uses: actions/checkout@v3
 
@@ -42,6 +42,9 @@ jobs:
       DOCKER_BUILDKIT: 1
       COMPOSE_DOCKER_CLI_BUILD: 1
     runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: ./backend
     steps:
       - uses: actions/checkout@v3
 
@@ -102,7 +105,7 @@ jobs:
       - uses: actions/download-artifact@v3
 
       - name: Fix up coverage report to work with coverage-check-action
-        run: sed -i 's/"line"/"covered_percent"/g' 'coverage/.last_run.json'
+        run: sed -i 's/"line"/"covered_percent"/g' 'Coverage Report/.last_run.json'
 
       - name: Publish Coverage Report
         uses: devmasx/coverage-check-action@v1.2.0
