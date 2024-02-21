@@ -84,14 +84,14 @@ jobs:
         if: always()
         with:
           name: Coverage Report
-          path: coverage
+          path: backend/coverage
 
       - name: Upload Test Results
         uses: actions/upload-artifact@v3
         if: always()
         with:
           name: Test Results
-          path: log/*.xml
+          path: backend/log/*.xml
           if-no-files-found: ignore
 
   publish_results:
