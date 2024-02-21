@@ -111,6 +111,6 @@ jobs:
         if: hashFiles('Coverage Report/.last_run.json') != ''
         with:
           type: simplecov
-          result_path: Coverage Report/.last_run.json
+          result_path: backend/Coverage Report/.last_run.json
           min_coverage: 90
           token: ${{ secrets.GITHUB_TOKEN }}

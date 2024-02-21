@@ -19,6 +19,7 @@
 # Ignore uploaded files in development.
 /backend/storage/*
 /backend/data
+/backend/coverage
 !/backend/storage/.keep
 /backend/tmp/storage/*
 !/backend/tmp/storage/
