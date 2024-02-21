@@ -7,10 +7,10 @@ unless ENV['NOCOVERAGE']
   require 'simplecov'
 
   SimpleCov.start 'rails' do
-      if ENV['CI']
-        SimpleCov.minimum_coverage 90
-        SimpleCov.refuse_coverage_drop
-      end
+    if ENV['CI']
+      SimpleCov.minimum_coverage 90
+      SimpleCov.refuse_coverage_drop
+    end
   end
 end
 
