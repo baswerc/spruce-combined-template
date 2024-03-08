@@ -16,7 +16,7 @@ RUN groupadd -g $userid -r spruce-challenge-api && \
     useradd -u $userid -r -m -d /srv/spruce-challenge-api -g spruce-challenge-api spruce-challenge-api
 
 RUN apt-get update
-RUN apt-get install -y curl libpq-dev libpq5 vim libboost-all-dev build-essential dumb-init
+RUN apt-get install -y curl libpq-dev libpq5 vim libboost-all-dev build-essential dumb-init pdftk
 
 WORKDIR /srv/spruce-challenge-api/src
 

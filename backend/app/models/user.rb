@@ -1,12 +1,8 @@
 # frozen_string_literal: true
 
-class User < Dry::Struct
-  attribute :uuid, Types::String
-  attribute :identity, UserIdentity
-
-  delegate :email, to: :identity, allow_nil: true
-
-  def user_account
-    @user_account ||= UserAccount.find(uuid)
-  end
+class User < ActiveRecord::Base
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :validatable
+  include DeviseTokenAuth::Concerns::User
 end

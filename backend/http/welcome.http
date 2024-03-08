@@ -1,0 +1,6 @@
+GET http://localhost:3000/
+access-token: zZWsOpTYZbxrz2PjgaVCkQ
+token-type: Bearer
+client: cucVWexIA0m4rFaMAZZSdQ
+uid: user@example.com
+Cookie: api_session=GaBC%2B7p6ZbRCwHdASRwcBYmwLPoP7Ee8DTIDivrbVf9ukG8itNesCVApkLL%2BT3ro%2F%2FiwvRt38OvllvZAHf0njkSEFkxm%2BafvXu%2F3hmHyB6S%2Bt4EDDPUe7t%2BkA9kiEOlYpkcr6QDTBGpJPpHnMFOqEMlr%2Bc%2F4AOeLhjFDZHkwKW3znDEfuF%2B1XhEY5f0qyWyd0RHmqAur1Hp7pGYmS8onkBZ%2BLZuieZ3YDPi%2Fw2NQQ3wsB8o5tBRfx9jWndeA%2B2wzivA6HEuutMMExKwmX5zu8AeuVw%3D%3D--kL8h%2BFGr18aqL%2BnE--4qNynhpzj2%2FTa759enm4Ew%3D%3D

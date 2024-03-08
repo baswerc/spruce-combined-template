@@ -4,8 +4,6 @@ module V1
   class ApidocsController < ApplicationController
     include Swagger::Blocks
 
-    skip_before_action :authenticate
-
     swagger_root do
       key :swagger, '2.0'
       info do

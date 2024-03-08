@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 class WelcomeController < ApplicationController
-  skip_before_action :authenticate, only: [:index]
+  before_action :authenticate_user!
   def index
-    render json: { message: "Welcome to the Team Snowbird's Spruce coding challenge!" }
+    render json: { message: "Welcome to the Team Snowbird's Spruce coding challenge #{current_user.ssn}!" }
   end
 end
