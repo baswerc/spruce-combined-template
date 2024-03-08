@@ -1,9 +1,7 @@
 function Second() {
     return (
         <va-card background>
-            <va-breadcrumbs
-                label="Breadcrumb"
-            >
+            <va-breadcrumbs label="Breadcrumb">
                 <a href="#home">
                     VA.gov home
                 </a>

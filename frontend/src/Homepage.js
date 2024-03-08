@@ -8,8 +8,7 @@ function Homepage(props = {children: []}) {
             close-btn-aria-label="Close notification"
             status="continue"
             uswds
-            visible
-        >
+            visible>
             <h2
                 id="track-your-status-on-mobile"
                 slot="headline">
@@ -22,7 +21,7 @@ function Homepage(props = {children: []}) {
                 <strong>
                     VA: Health and Benefits
                 </strong>
-                {' '}mobile app to get started.
+                mobile app to get started.
             </p>
             <va-button
                 primary-alternate

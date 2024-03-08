@@ -1,5 +1,3 @@
-import "@department-of-veterans-affairs/component-library/dist/main.css"
-import './App.css';
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { applyPolyfills, defineCustomElements } from '@department-of-veterans-affairs/component-library';

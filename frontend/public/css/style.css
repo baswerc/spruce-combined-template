@@ -8135,8 +8135,8 @@ select {
     font-style: normal;
     font-weight: 900;
     font-display: block;
-    src: url(/assets/fonts/fa-solid-900.eot);
-    src: url(/assets/fonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/fa-solid-900.woff2) format("woff2"),url(/assets/fonts/fa-solid-900.woff) format("woff"),url(/assets/fonts/fa-solid-900.ttf) format("truetype"),url(./7a8b4f130182d19a2d7c67d80c090397.svg#fontawesome) format("svg")
+    src: url(/fonts/fa-solid-900.eot);
+    src: url(/fonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(/fonts/fa-solid-900.woff2) format("woff2"),url(/fonts/fa-solid-900.woff) format("woff"),url(/fonts/fa-solid-900.ttf) format("truetype"),url(./7a8b4f130182d19a2d7c67d80c090397.svg#fontawesome) format("svg")
 }
 
 .fa,.fas {
@@ -8153,8 +8153,8 @@ select {
     font-style: normal;
     font-weight: 400;
     font-display: block;
-    src: url(/assets/fonts/fa-brands-400.eot);
-    src: url(/assets/fonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/fa-brands-400.woff2) format("woff2"),url(/assets/fonts/fa-brands-400.woff) format("woff"),url(/assets/fonts/fa-brands-400.ttf) format("truetype"),url(./2f517e09eb2ca6650ff5bec5a95157ab.svg#fontawesome) format("svg")
+    src: url(/fonts/fa-brands-400.eot);
+    src: url(/fonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),url(/fonts/fa-brands-400.woff2) format("woff2"),url(/fonts/fa-brands-400.woff) format("woff"),url(/fonts/fa-brands-400.ttf) format("truetype"),url(./2f517e09eb2ca6650ff5bec5a95157ab.svg#fontawesome) format("svg")
 }
 
 .fab {
@@ -8171,8 +8171,8 @@ select {
     font-style: normal;
     font-weight: 400;
     font-display: block;
-    src: url(/assets/fonts/fa-regular-400.eot);
-    src: url(/assets/fonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),url(/assets/fonts/fa-regular-400.woff2) format("woff2"),url(/assets/fonts/fa-regular-400.woff) format("woff"),url(/assets/fonts/fa-regular-400.ttf) format("truetype"),url(./4689f52cc96215721344e51e5831eec1.svg#fontawesome) format("svg")
+    src: url(/fonts/fa-regular-400.eot);
+    src: url(/fonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),url(/fonts/fa-regular-400.woff2) format("woff2"),url(/fonts/fa-regular-400.woff) format("woff"),url(/fonts/fa-regular-400.ttf) format("truetype"),url(./4689f52cc96215721344e51e5831eec1.svg#fontawesome) format("svg")
 }
 
 .far {
